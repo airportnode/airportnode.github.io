@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://airportnode.github.io/news/article-53616.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解决go-micro与其它gRPC框架之间的通信问题</title>
+        <meta name="description" content="在之前的文章中分别介绍了使用gRPC官方插件和go-micro插件开发gRPC应用程序的方式，都能正常走通。不过当两者混合使用的时候，互相访问就成了问题。比如使用go-micro插件生成的gRPC客户" />
+        <link rel="icon" href="/assets/website/img/airportnode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Airport Node免费节点地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://airportnode.github.io/news/article-53616.htm" />
+    <meta property="og:site_name" content="Airport Node免费节点地址中文网" />
+    <meta property="og:title" content="解决go-micro与其它gRPC框架之间的通信问题" />
+    <meta property="og:image" content="https://airportnode.github.io/uploads/20250201/0b8e0cc6f28e7642f006bfae65c8b154.webp" />
+        <meta property="og:release_date" content="2025-02-09T10:04:38" />
+    <meta property="og:updated_time" content="2025-02-09T10:04:38" />
+        <meta property="og:description" content="在之前的文章中分别介绍了使用gRPC官方插件和go-micro插件开发gRPC应用程序的方式，都能正常走通。不过当两者混合使用的时候，互相访问就成了问题。比如使用go-micro插件生成的gRPC客户" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="解决go-micro与其它gRPC框架之间的通信问题">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <link rel="stylesheet" href="/assets/website/css/airportnode/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fakeLoader.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDWP7NM5HQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZDWP7NM5HQ');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- loading indicator -->
+    <div class="fakeLoader"></div>
+    <!-- end loading indicator -->
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container">
+            <a href="/" class="navbar-brand xcblog-blog-logo">
+                                <span>Airport Node</span>
+                            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/client.htm">客户端</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/news/">新闻资讯</a>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end navigation bar -->
+    <!-- header-title -->
+    <div class="header-title">
+        <div class="container">
+            <h1>解决go-micro与其它gRPC框架之间的通信问题</h1>
+            <p>
+            	<a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+            </p>
+        </div>
+    </div>
+    <!-- end header-title -->
+    <!-- offerings -->
+    <div class="services section bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/f345f0d9ff66a91ef21802d274cc9303.jpg" alt="解决go-micro与其它gRPC框架之间的通信问题"></p> <p>在之前的文章中分别介绍了使用gRPC官方插件和go-micro插件开发gRPC应用程序的方式，都能正常走通。不过当两者混合使用的时候，互相访问就成了问题。比如使用go-micro插件生成的gRPC客户端访问基于gRPC官方插件创建的服务端时就会出现如下错误：</p> <pre><code>{"id":"go.micro.client","code":501,"status":"Not Implemented"}</code></pre> <p>经过一番探索，发现是因为go-micro的插件生成代码时丢弃了proto定义中的package，客户端API和服务端API都没有使用这个package，所以它自己也能逻辑自洽，但是和其它框架或者语言的gRPC服务通信时就出现问题了。</p> <p>这里以 hello.proto 为例：</p> <pre><code>syntax = "proto3";  option go_package="/proto";  package Business;  service Hello {   rpc Say (SayRequest) returns (SayResponse); }  message SayResponse {   string Message = 1; }  message SayRequest {   string Name = 1; }</code></pre> <p>对于客户端代理，protoc-gen-go-grpc生成的是：</p> <pre><code>err := c.cc.Invoke(ctx, "/Business.Hello/Say", in, out, opts...)</code></pre> <p>protoc-gen-micro生成的是：</p> <pre><code>req := c.c.NewRequest(c.name, "Hello.Say", in)</code></pre> <p>可以明显看到，go-micro生成的gRPC method中缺少package。当然这个method的风格也有些差异，不过这个不是问题，因为go-micro还会它进行一些格式化处理，格式化代码在grpc插件中。</p> <p>plugins/client/grpc/request.go :</p> <pre><code>func methodToGRPC(service, method string) string { 	// no method or already grpc method 	if len(method) == 0 || method[0] == '/' { 		return method 	}  	// assume method is Foo.Bar 	mParts := strings.Split(method, ".") 	if len(mParts) != 2 { 		return method 	}  	if len(service) == 0 { 		return fmt.Sprintf("/%s/%s", mParts[0], mParts[1]) 	}  	// return /pkg.Foo/Bar 	return fmt.Sprintf("/%s.%s/%s", service, mParts[0], mParts[1]) }</code></pre> <p>可以看到go-micro直接把服务名称作为了package名称，这两者不能等同，不相同时就会出现问题。</p> <p>网上也没有人提过这个问题，可能混合使用的人不多吧。于是我研究了一下 go-micro 的源码，因为是生成的代码中缺少信息，所以要解决这个问题还是得从protoc-gen-micro入手。</p> <p>注意这里使用的是<strong>go-micro v4</strong>版本，其它版本未跟进。</p> <h2 id="客户端改造">客户端改造</h2> <p>针对客户端问题，我做了如下一些修改：</p> <p>在生成客户端method时加上package，并直接生成gRPC风格method（go-micro内部其实支持这种风格），修改文件：cmd/protoc-gen-micro/plugin/micro/micro.go</p> <pre><code class="language-go">func (g *micro) generateClientMethod(pkg, reqServ, servName, serviceDescVar string, method *pb.MethodDescriptorProto, descExpr string) { 	reqMethod := fmt.Sprintf("%s.%s", servName, method.GetName()) 	useGrpc := g.gen.Param["use_grpc"] 	if useGrpc != "" { 		reqMethod = fmt.Sprintf("/%s.%s/%s", pkg, servName, method.GetName()) 	} ...</code></pre> <p>因为还要向前兼容，不能影响现有用户，所以给这个逻辑加了一个开关，使用参数 use_grpc 才会应用新的生成方式。generateClientMethod 方法的 pkg 参数原来并没有，是新加的，从上下文中也比较容易获取到。具体改动可以看这里：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/asim/go-micro/pull/2474/commits/0d435a690ea21a3f64b0534d1fa244f512601493"  target="_blank" rel="nofollow">https://github.com/asim/go-micro/pull/2474/commits/0d435a690ea21a3f64b0534d1fa244f512601493</a></p> <p>现在如果明确只使用gRPC进行通信，或者需要和其它框架或者语言的gRPC应用程序通信，生成代码时可以这样做：</p> <pre><code>protoc --go_out=. --micro_out=. --micro_opt=use_grpc=1 xxx.proto</code></pre> <p>关键就是<em>--micro_opt=use_grpc=1</em>，<em>use_grpc</em>这个参数会传递给 protoc-gen-micro，然后就可以在上边修改过的代码中获取到，不管这个参数的值是什么，只要使用了它，就会生成gRPC风格的带package的method。现在生成的代码是这样的：</p> <pre><code>req := c.c.NewRequest(c.name, "/Business.Hello/Say", in)</code></pre> <p>用这个客户端代理访问其它框架或者语言开发的gRPC服务就没有问题了，当然访问go-micro的gRPC服务也没有问题。</p> <p>怎么获取到这个最新版的 protoc-gen-micro 呢？这个修改提了PR之后，目前已经合并到官方的Github仓库中，但是还没有打tag，可以这样安装：</p> <pre><code>go install go-micro.dev/v4/cmd/protoc-gen-micro@1919048c8f20</code></pre> <p>这可能不是一个好的修改，因为还需要知道有 use_grpc 这么个参数。肯定还有别的修改方案，但是因为对go-micro了解的不多，所有只选择了这个不会影响现有通信方式的方案。</p> <h2 id="服务端改造">服务端改造</h2> <p>服务端没有问题，别的框架或者开发语言的gRPC客户端可以调用基于go-micro的gRPC服务。</p> <p>一开始我测试的时候也遇到了问题，先入为主的以为protoc-gen-micro生成的服务端也有package的问题，因此还提交了个PR，然后被啪啪打脸。然后我又读了读源码，发现go-micro服务端特别巧妙的把客户端请求中的package信息擦除了，所以客户端是否传递package都没有影响，反正服务端不需要。</p> <p>服务端的注册逻辑在 plugins/server/grpc/server.go 中的 register 方法：</p> <pre><code>s := new(service) s.typ = reflect.TypeOf(rcvr) s.rcvr = reflect.ValueOf(rcvr) sname := reflect.Indirect(s.rcvr).Type().Name() ... server.serviceMap[s.name] = s</code></pre> <p>可以看到这里直接用反射获取的类型名称作为服务名称，没有package什么事。</p> <p>然后接收到客户端的gRPC请求时，go-micro又把请求中的package擦除了。这段逻辑在 plugins/server/grpc/grpc.go 中的 handler 方法中：</p> <pre><code>serviceName, methodName, err := mgrpc.ServiceMethod(fullMethod) service := g.rpc.serviceMap[serviceName]</code></pre> <p>通过 mgrpc.ServiceMethod 获取服务名称时去掉了package名称，所以客户端带不带package都没有问题。</p> <h2 id="运行效果">运行效果</h2> <p>现在把程序跑起来，试试用  protoc-gen-micro 生成的客户端访问 基于 protoc-gen-go-grpc 的服务端。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/9b4105688f967028eb98a172e58da098.jpg" alt="解决go-micro与其它gRPC框架之间的通信问题"></p> <p>以上就是本文的主要内容，示例代码已经上传到Github，欢迎访问：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/bosima/go-demo/tree/main/go-micro-grpc-hello-compatible"  target="_blank" rel="nofollow">https://github.com/bosima/go-demo/tree/main/go-micro-grpc-hello-compatible</a></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-53086.htm">宠物粮供应商电话（宠物粮供应商电话是多少）</a></p>
+                                        <p>下一个：<a href="/news/article-53617.htm">动物疫苗许可证过期了怎么办（动物疫苗过期怎么处理）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-50461.htm" title="沈阳芭比堂动物医院院分布地方在哪里（芭比堂动物医院有限责任公司）">沈阳芭比堂动物医院院分布地方在哪里（芭比堂动物医院有限责任公司）</a></li>
+                        <li class="py-2"><a href="/news/article-53085.htm" title="Python笔记：内置函数chr()用法">Python笔记：内置函数chr()用法</a></li>
+                        <li class="py-2"><a href="/news/article-52029.htm" title="动物疫苗生产车间图片（动物疫苗生产车间图片高清）">动物疫苗生产车间图片（动物疫苗生产车间图片高清）</a></li>
+                        <li class="py-2"><a href="/news/article-50975.htm" title="给仓鼠看病花很多钱（仓鼠看医生多少块钱）">给仓鼠看病花很多钱（仓鼠看医生多少块钱）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-5-node-share.htm" title="2月5日最新Airport Node订阅 | 20M/S|2025年V2ray/Clash/Shadowrocket/SSR免费节点地址链接分享">2月5日最新Airport Node订阅 | 20M/S|2025年V2ray/Clash/Shadowrocket/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-51516.htm" title="附近领养狗狗的地方 附近领养狗狗的地方在哪里">附近领养狗狗的地方 附近领养狗狗的地方在哪里</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-4-node-share.htm" title="2月4日最新Airport Node订阅 | 21.4M/S|2025年Clash/Shadowrocket/V2ray/SSR免费节点地址链接分享">2月4日最新Airport Node订阅 | 21.4M/S|2025年Clash/Shadowrocket/V2ray/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-52028.htm" title="让猫挠了轻微出血怎么办（10种图片猫抓破皮不需要打针）">让猫挠了轻微出血怎么办（10种图片猫抓破皮不需要打针）</a></li>
+                        <li class="py-2"><a href="/news/article-49685.htm" title="将时间戳值增加微秒以将其转换为整数，MySQL将返回什么？">将时间戳值增加微秒以将其转换为整数，MySQL将返回什么？</a></li>
+                        <li class="py-2"><a href="/news/article-50976.htm" title="2020上海宠物领养日什么时候结束的（上海领养宠物狗）">2020上海宠物领养日什么时候结束的（上海领养宠物狗）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end offerings -->
+    
+        <!-- bottom footer -->
+    <div class="footer-bottom">
+        <div class="container">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p class="text-white-50 f-15 mb-0">
+                <a href="/">Airport Node免费节点地址中文网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <!-- end bottom footer -->
+    <!-- script -->
+    <script data-cfasync="false" src="/assets/website/js/frontend/airportnode/email-decode.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/fakeLoader.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+    <!-- end script -->
+</body>
+
+</html>
