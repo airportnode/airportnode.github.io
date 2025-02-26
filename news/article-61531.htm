@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://airportnode.github.io/news/article-61531.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c#对Datatable数据的处理：DataTable.Select()和DataTable.DefaultView.ToTable()；DataRow转DataTable</title>
+        <meta name="description" content="在sql语句将数据筛选出来后需要在程式在再对数据进行操作比較频繁，以下为整理的部分常用处理方式。 1、DataTable.Select(); DataTable.Select()有4个方法的重载，可以" />
+        <link rel="icon" href="/assets/website/img/airportnode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Airport Node免费节点地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://airportnode.github.io/news/article-61531.htm" />
+    <meta property="og:site_name" content="Airport Node免费节点地址中文网" />
+    <meta property="og:title" content="c#对Datatable数据的处理：DataTable.Select()和DataTable.DefaultView.ToTable()；DataRow转DataTable" />
+    <meta property="og:image" content="https://airportnode.github.io/uploads/20250201/022d052b190cbcd86e8c2fbcdcb697dc.webp" />
+        <meta property="og:release_date" content="2025-02-23T09:46:05" />
+    <meta property="og:updated_time" content="2025-02-23T09:46:05" />
+        <meta property="og:description" content="在sql语句将数据筛选出来后需要在程式在再对数据进行操作比較频繁，以下为整理的部分常用处理方式。 1、DataTable.Select(); DataTable.Select()有4个方法的重载，可以" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="c#对Datatable数据的处理：DataTable.Select()和DataTable.DefaultView.ToTable()；DataRow转DataTable">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <link rel="stylesheet" href="/assets/website/css/airportnode/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fakeLoader.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDWP7NM5HQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZDWP7NM5HQ');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- loading indicator -->
+    <div class="fakeLoader"></div>
+    <!-- end loading indicator -->
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container">
+            <a href="/" class="navbar-brand xcblog-blog-logo">
+                                <span>Airport Node</span>
+                            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/client.htm">客户端</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/news/">新闻资讯</a>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end navigation bar -->
+    <!-- header-title -->
+    <div class="header-title">
+        <div class="container">
+            <h1>c#对Datatable数据的处理：DataTable.Select()和DataTable.DefaultView.ToTable()；DataRow转DataTable</h1>
+            <p>
+            	<a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+            </p>
+        </div>
+    </div>
+    <!-- end header-title -->
+    <!-- offerings -->
+    <div class="services section bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>在sql语句将数据筛选出来后需要在程式在再对数据进行操作比較频繁，以下为整理的部分常用处理方式。</p> <p>1、DataTable.Select();<br /> DataTable.Select()有4个方法的重载，可以进行简单的搜索和排序，以下为常用的数据处理方法。</p> <pre><code class="prism language-csharp">DataRow<span class="token punctuation">[</span><span class="token punctuation">]</span> drArr <span class="token operator">=</span> dt<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span><span class="token string">"列名=’条件’"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//精准条件查询</span> DataRow<span class="token punctuation">[</span><span class="token punctuation">]</span> drArr <span class="token operator">=</span> dt<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span><span class="token string">"列名 LIKE ’%条件%’"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//模糊查询</span> DataRow<span class="token punctuation">[</span><span class="token punctuation">]</span> drArr <span class="token operator">=</span> dt<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span><span class="token string">"列名1=’条件1’ and 列名2 LIKE ’%条件2%’"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//多条件查询</span> DataRow<span class="token punctuation">[</span><span class="token punctuation">]</span> drArr <span class="token operator">=</span> dt<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span><span class="token string">"列名 LIKE ’%条件%’"</span><span class="token punctuation">,</span><span class="token string">"排序列名 ASC"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//模糊查询并进行排序</span> DataRow<span class="token punctuation">[</span><span class="token punctuation">]</span> drArr <span class="token operator">=</span> dt<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span><span class="token string">"列名 LIKE ’%条件%’"</span><span class="token punctuation">,</span><span class="token string">"排序列名 ASC,排序列名2 DESC"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//模糊查询并进行多列排序</span> </code></pre> <p>2、DataTable.DefaultView.ToTable(); //将指定列重复值合并类似group by</p> <pre><code class="prism language-csharp"> <span class="token class-name">DataTable</span> DT <span class="token operator">=</span> dt<span class="token punctuation">.</span>DefaultView<span class="token punctuation">.</span><span class="token function">ToTable</span><span class="token punctuation">(</span><span class="token keyword">true</span><span class="token punctuation">,</span> <span class="token string">"列名"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//将指定列重复值合并类似group by</span> </code></pre> <p>3、DataRow转DataTable<br /> 相信有很多小伙伴和我一样，在通过DataTable.Select();方法使用后，因为程式需要,需要将DataRow转DataTable，以下为参考方法。</p> <p>（1）、DataTable -&gt; DataRow -&gt; DataTable</p> <pre><code class="prism language-csharp"><span class="token comment">// 去除沒寫入廠商的數據</span> <span class="token class-name">DataTable</span> dtVendor <span class="token operator">=</span> VendorDataTable<span class="token punctuation">.</span><span class="token function">Clone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> DataRow<span class="token punctuation">[</span><span class="token punctuation">]</span> Rows <span class="token operator">=</span> VendorDataTable<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span><span class="token string">"Vendor &lt;&gt; ''"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name">DataRow</span> <span class="token class-name">DR</span> <span class="token keyword">in</span> Rows<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>     dtVendor<span class="token punctuation">.</span><span class="token function">ImportRow</span><span class="token punctuation">(</span>DR<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> </code></pre> <p>（2）、 DataRow -&gt; DataTable</p> <pre><code class="prism language-csharp"><span class="token keyword">if</span> <span class="token punctuation">(</span>rows<span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> rows<span class="token punctuation">.</span>Length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>  <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>   <span class="token class-name">DataTable</span> dtVendor <span class="token operator">=</span> rows<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>Table<span class="token punctuation">.</span><span class="token function">Clone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 复制DataRow的表结构  </span> <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name">DataRow</span> <span class="token class-name">DR</span> <span class="token keyword">in</span> rows<span class="token punctuation">)</span>   dtVendor<span class="token punctuation">.</span>Rows<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>DR<span class="token punctuation">.</span>ItemArray<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 将DataRow添加到DataTable中 </span>  </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-60937.htm">哪有免费领养的宠物狗（哪里有免费领养宠物的大型地方）</a></p>
+                                        <p>下一个：<a href="/news/article-61532.htm">SpringSecurity如何使用注解控制权限</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-57506.htm" title="动物诊疗许可证在哪个部门办理的呢（动物诊疗许可证办理流程）">动物诊疗许可证在哪个部门办理的呢（动物诊疗许可证办理流程）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-10-free-subscribe-node.htm" title="2月10日最新Airport Node订阅 | 18.3M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享">2月10日最新Airport Node订阅 | 18.3M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-58738.htm" title="狗狗抓了一条红印子没出血（狗狗抓了一条红印子没出血有事吗）">狗狗抓了一条红印子没出血（狗狗抓了一条红印子没出血有事吗）</a></li>
+                        <li class="py-2"><a href="/news/article-52544.htm" title="[ Shell ] 通过 Shell 脚本导出 GDSII/OASIS 文件">[ Shell ] 通过 Shell 脚本导出 GDSII/OASIS 文件</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-19-node-share.htm" title="2月19日最新Airport Node订阅 | 22M/S|2025年Shadowrocket/SSR/Clash/V2ray免费节点地址链接分享">2月19日最新Airport Node订阅 | 22M/S|2025年Shadowrocket/SSR/Clash/V2ray免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-55271.htm" title="vue 实现弹窗关闭后刷新效果_vue.js">vue 实现弹窗关闭后刷新效果_vue.js</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-15-clash-windows.htm" title="2月15日最新Airport Node订阅 | 19.4M/S|2025年Clash/SSR/Shadowrocket/V2ray免费节点地址链接分享">2月15日最新Airport Node订阅 | 19.4M/S|2025年Clash/SSR/Shadowrocket/V2ray免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-52029.htm" title="动物疫苗生产车间图片（动物疫苗生产车间图片高清）">动物疫苗生产车间图片（动物疫苗生产车间图片高清）</a></li>
+                        <li class="py-2"><a href="/news/article-62724.htm" title="济南宠物领养活动公司（济南领养狗狗）">济南宠物领养活动公司（济南领养狗狗）</a></li>
+                        <li class="py-2"><a href="/news/article-53617.htm" title="动物疫苗许可证过期了怎么办（动物疫苗过期怎么处理）">动物疫苗许可证过期了怎么办（动物疫苗过期怎么处理）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">75</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end offerings -->
+    
+        <!-- bottom footer -->
+    <div class="footer-bottom">
+        <div class="container">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p class="text-white-50 f-15 mb-0">
+                <a href="/">Airport Node免费节点地址中文网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <!-- end bottom footer -->
+    <!-- script -->
+    <script data-cfasync="false" src="/assets/website/js/frontend/airportnode/email-decode.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/fakeLoader.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+    <!-- end script -->
+</body>
+
+</html>

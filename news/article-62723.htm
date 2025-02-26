@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://airportnode.github.io/news/article-62723.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ribbon、Hystrix超时问题</title>
+        <meta name="description" content="ribbon:http:client:enabled:trueOkToRetryOnAllOperations:true#对所有操作请求都进行重试，默认falseReadTimeout:2000#负载" />
+        <link rel="icon" href="/assets/website/img/airportnode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Airport Node免费节点地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://airportnode.github.io/news/article-62723.htm" />
+    <meta property="og:site_name" content="Airport Node免费节点地址中文网" />
+    <meta property="og:title" content="Ribbon、Hystrix超时问题" />
+    <meta property="og:image" content="https://airportnode.github.io/uploads/20250201/6e259450aae4e1f3bfea1ee4550e164c.webp" />
+        <meta property="og:release_date" content="2025-02-25T04:59:40" />
+    <meta property="og:updated_time" content="2025-02-25T04:59:40" />
+        <meta property="og:description" content="ribbon:http:client:enabled:trueOkToRetryOnAllOperations:true#对所有操作请求都进行重试，默认falseReadTimeout:2000#负载" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Ribbon、Hystrix超时问题">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <link rel="stylesheet" href="/assets/website/css/airportnode/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fakeLoader.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDWP7NM5HQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZDWP7NM5HQ');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- loading indicator -->
+    <div class="fakeLoader"></div>
+    <!-- end loading indicator -->
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container">
+            <a href="/" class="navbar-brand xcblog-blog-logo">
+                                <span>Airport Node</span>
+                            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/client.htm">客户端</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/news/">新闻资讯</a>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end navigation bar -->
+    <!-- header-title -->
+    <div class="header-title">
+        <div class="container">
+            <h1>Ribbon、Hystrix超时问题</h1>
+            <p>
+            	<a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+            </p>
+        </div>
+    </div>
+    <!-- end header-title -->
+    <!-- offerings -->
+    <div class="services section bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <pre><code class="prism language-yaml"><span class="token key atrule">ribbon</span><span class="token punctuation">:</span><span class="token key atrule">http</span><span class="token punctuation">:</span><span class="token key atrule">client</span><span class="token punctuation">:</span><span class="token key atrule">enabled</span><span class="token punctuation">:</span><span class="token boolean important">true</span><span class="token key atrule">OkToRetryOnAllOperations</span><span class="token punctuation">:</span><span class="token boolean important">true</span><span class="token comment">#对所有操作请求都进行重试，默认false</span><span class="token key atrule">ReadTimeout</span><span class="token punctuation">:</span><span class="token number">2000</span><span class="token comment">#负载均衡超时时间，默认值 1000(ms)</span><span class="token key atrule">ConnectTimeout</span><span class="token punctuation">:</span><span class="token number">3000</span><span class="token comment">#请求连接的超时时间，默认值 1000</span><span class="token key atrule">MaxAutoRetries</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token comment"># 对当前实例的重试次数</span><span class="token key atrule">MaxAutoRetriesNextServer</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token comment"># 重试切换实例的次数，默认1</span></code></pre> <p><strong>服务请求时间：</strong></p> <blockquote> <p>一般情况下，连接时间很短可以忽略不记<br /> 请求时间 = (MaxAutoRetries + 1) * (MaxAutoRetriesNextServer + 1) * ReadTimeout<br /> 但是如果想要拉满请求时间，连接时间拉满的话：则要加上连接时间。</p> </blockquote> <pre><code class="prism language-yaml"><span class="token key atrule">hystrix</span><span class="token punctuation">:</span><span class="token key atrule">command</span><span class="token punctuation">:</span><span class="token key atrule">default</span><span class="token punctuation">:</span><span class="token comment">#default全局有效，service id指定应用有效</span><span class="token key atrule">execution</span><span class="token punctuation">:</span><span class="token key atrule">timeout</span><span class="token punctuation">:</span><span class="token comment">#如果enabled设置为false，则请求超时交给ribbon控制,为true,则超时作为熔断根据</span><span class="token key atrule">enabled</span><span class="token punctuation">:</span><span class="token boolean important">true</span><span class="token key atrule">isolation</span><span class="token punctuation">:</span><span class="token key atrule">thread</span><span class="token punctuation">:</span><span class="token key atrule">timeoutInMilliseconds</span><span class="token punctuation">:</span><span class="token number">10000</span><span class="token comment">#断路器超时时间，默认1000ms</span></code></pre> <p>一般设置 Hystrix 熔断时间大于Ribbon请求时间（包括重试），这样的话，只有当不再重试请求的时候才会进行熔断操作。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-62139.htm">动物疫苗防疫站几点上班（动物疫苗防疫站几点上班的）</a></p>
+                                        <p>下一个：<a href="/news/article-62724.htm">济南宠物领养活动公司（济南领养狗狗）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-16-free-clash-subscribe.htm" title="2月16日最新Airport Node订阅 | 21.1M/S|2025年SSR/V2ray/Shadowrocket/Clash免费节点地址链接分享">2月16日最新Airport Node订阅 | 21.1M/S|2025年SSR/V2ray/Shadowrocket/Clash免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-26-free-node-subscribe.htm" title="2月26日最新Airport Node订阅 | 22.6M/S|2025年SSR/Shadowrocket/V2ray/Clash免费节点地址链接分享">2月26日最新Airport Node订阅 | 22.6M/S|2025年SSR/Shadowrocket/V2ray/Clash免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-11-clash-node.htm" title="2月11日最新Airport Node订阅 | 20.8M/S|2025年V2ray/Clash/Shadowrocket/SSR免费节点地址链接分享">2月11日最新Airport Node订阅 | 20.8M/S|2025年V2ray/Clash/Shadowrocket/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-49686.htm" title="java中通过es搜索数据">java中通过es搜索数据</a></li>
+                        <li class="py-2"><a href="/news/article-53616.htm" title="解决go-micro与其它gRPC框架之间的通信问题">解决go-micro与其它gRPC框架之间的通信问题</a></li>
+                        <li class="py-2"><a href="/news/article-55824.htm" title="动物疫苗的种类及作用有哪些图片及名称（动物疫苗有哪几种）">动物疫苗的种类及作用有哪些图片及名称（动物疫苗有哪几种）</a></li>
+                        <li class="py-2"><a href="/news/article-56368.htm" title="被家猫抓伤轻微出血可以用碘伏吗（被猫抓伤出血可以用碘伏消毒吗）">被家猫抓伤轻微出血可以用碘伏吗（被猫抓伤出血可以用碘伏消毒吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-25-clash-windows.htm" title="2月25日最新Airport Node订阅 | 20.8M/S|2025年Clash/Shadowrocket/SSR/V2ray免费节点地址链接分享">2月25日最新Airport Node订阅 | 20.8M/S|2025年Clash/Shadowrocket/SSR/V2ray免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-17-free-subscribe-node.htm" title="2月17日最新Airport Node订阅 | 22.9M/S|2025年Clash/V2ray/SSR/Shadowrocket免费节点地址链接分享">2月17日最新Airport Node订阅 | 22.9M/S|2025年Clash/V2ray/SSR/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-7-clash-windows.htm" title="2月7日最新Airport Node订阅 | 18.1M/S|2025年Shadowrocket/V2ray/SSR/Clash免费节点地址链接分享">2月7日最新Airport Node订阅 | 18.1M/S|2025年Shadowrocket/V2ray/SSR/Clash免费节点地址链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">78</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end offerings -->
+    
+        <!-- bottom footer -->
+    <div class="footer-bottom">
+        <div class="container">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p class="text-white-50 f-15 mb-0">
+                <a href="/">Airport Node免费节点地址中文网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <!-- end bottom footer -->
+    <!-- script -->
+    <script data-cfasync="false" src="/assets/website/js/frontend/airportnode/email-decode.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/fakeLoader.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+    <!-- end script -->
+</body>
+
+</html>
