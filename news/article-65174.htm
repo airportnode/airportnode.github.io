@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://airportnode.github.io/news/article-65174.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElasticSearch（五） 整合Spring-data-elasticsearch</title>
+        <meta name="description" content="spring-data-elasticsearch对ElasticSearch API进行了封装，很好的集成了Spring框架，我们只需要定义好实体类（定义文档、文档类型、索引字段，字段类型等）和实现" />
+        <link rel="icon" href="/assets/website/img/airportnode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Airport Node免费节点地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://airportnode.github.io/news/article-65174.htm" />
+    <meta property="og:site_name" content="Airport Node免费节点地址中文网" />
+    <meta property="og:title" content="ElasticSearch（五） 整合Spring-data-elasticsearch" />
+    <meta property="og:image" content="https://airportnode.github.io/uploads/20250201/a220f6302078881e33587db32b3bd4d3.webp" />
+        <meta property="og:release_date" content="2025-03-01T06:59:25" />
+    <meta property="og:updated_time" content="2025-03-01T06:59:25" />
+        <meta property="og:description" content="spring-data-elasticsearch对ElasticSearch API进行了封装，很好的集成了Spring框架，我们只需要定义好实体类（定义文档、文档类型、索引字段，字段类型等）和实现" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ElasticSearch（五） 整合Spring-data-elasticsearch">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <link rel="stylesheet" href="/assets/website/css/airportnode/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fakeLoader.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDWP7NM5HQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZDWP7NM5HQ');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- loading indicator -->
+    <div class="fakeLoader"></div>
+    <!-- end loading indicator -->
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container">
+            <a href="/" class="navbar-brand xcblog-blog-logo">
+                                <span>Airport Node</span>
+                            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/client.htm">客户端</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/news/">新闻资讯</a>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end navigation bar -->
+    <!-- header-title -->
+    <div class="header-title">
+        <div class="container">
+            <h1>ElasticSearch（五） 整合Spring-data-elasticsearch</h1>
+            <p>
+            	<a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+            </p>
+        </div>
+    </div>
+    <!-- end header-title -->
+    <!-- offerings -->
+    <div class="services section bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>spring-data-elasticsearch对ElasticSearch API进行了封装，很好的集成了Spring框架，我们只需要定义好实体类（定义文档、文档类型、索引字段，字段类型等）和实现对应的接口，即可操作ElasticSearch。<br /><strong>1. 版本对应关系</strong> :spring-data-elasticsearch 跟ElasticSearch客户端是有版本对应关系的，低版本的elasticsearch客户端是连接不了高版本的elasticsearch服务器，所以，使用spring-data-elasticsearch前要先确定好elasticsearch服务器版本，然后引入对应的spring-data-elasticsearch 版本。版本对应关系如下：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221113/b040a3c0150c960949d9f62dba9f0d47.jpg" alt="ElasticSearch（五） 整合Spring-data-elasticsearch"><br /><strong>2. 引入maven依赖</strong><br /> 引入maven包</p> <pre><code>&lt;dependency&gt;     &lt;groupId&gt;org.springframework.data&lt;/groupId&gt;     &lt;artifactId&gt;spring-data-elasticsearch&lt;/artifactId&gt;     &lt;version&gt;3.1.6.RELEASE&lt;/version&gt; &lt;/dependency&gt;</code></pre> <p><strong>3.定义实体类和对应的Repository</strong><br /> 实体类：User.java，类注解和属性注解请看下一节解析。</p> <pre><code>@Document(indexName = "user_db", type = "user_table") public class User{     @Id     @Field(type = FieldType.Keyword)     private String userId;      @Field(type= FieldType.Keyword)     private String account;       @Field(type= FieldType.Keyword)     private String userName;      @Field(type= FieldType.Keyword)     private String idCard;       @Field(type = FieldType.Date,             format = DateFormat.custom,             pattern = "yyyy-MM-dd HH:mm:ss")     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")     private Date createTime;      //DOTO     //get和set方法     //toString()方法 }</code></pre> <p>定义Repository：UserRepository，Repository使用请看下一节解析</p> <pre><code>package com.myelastic.repository; import com.myelastic.model.User; import org.springframework.data.elasticsearch.repository.ElasticsearchRepository; public interface UserRepository extends ElasticsearchRepository&lt;User, String&gt; {     User findByUserId(StringuserId); }</code></pre> <p>至此，实体类和Repository就定义完成了，实体类主要是定义了Java对象跟ES索引、字段映射之间的关系，Repository仓库主要定义了对ES相关的操作，默认集成ElasticsearchRepository类是支持普通的增删查的。<br /><strong>4、引入XML，集成Spring</strong><br /> 定义完实体类和Reposity后，就可以通过配置xml文件，并且引入到Spring中。以下为spring-elasticsearch.xml配置：</p> <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt; &lt;beans xmlns="http://www.springframework.org/schema/beans"        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"        xmlns:elasticsearch="http://www.springframework.org/schema/data/elasticsearch"        xsi:schemaLocation="http://www.springframework.org/schema/data/elasticsearch https://www.springframework.org/schema/data/elasticsearch/spring-elasticsearch.xsd 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd"&gt;      &lt;elasticsearch:repositories base-package="com.myelastic.repository"  elasticsearch-template-ref="elasticsearchTemplate"/&gt;      &lt;elasticsearch:transport-client id="client" cluster-nodes="ip:9300,ip:9300" cluster-name="elasticsearch" /&gt;      &lt;bean name="elasticsearchTemplate" class="org.springframework.data.elasticsearch.core.ElasticsearchTemplate"&gt;         &lt;constructor-arg name="client" ref="client"/&gt;     &lt;/bean&gt;  &lt;/beans&gt;</code></pre> <p>base-package：指RepositoryJava类定义包路径，如UserRepository 在包com.myelastic.repository路径下。<br /> elasticsearch-template-ref：指向模板配置bean名称，不填默认为elasticsearchTemplate。<br /> cluster-nodes：集群节点，ip:端口号（Transport 端口，非http端口），多个节点英文逗号（,）隔开。<br /> cluster-name：集群节点名称，对应ES配置文件elasticsearch.yml<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://xn--cluster-vk1r.name"  rel="nofollow">的cluster.name</a>。<br /><strong>5、完成配置，调用实现</strong><br /> 完成以上配置后，就可以在程序中引用调用ES了。</p> <pre><code>@Service public class MyService {    @Autowired   private UserRepository repository;    //创建用户索引   public User userIndex(User user) {     	User userEs = repository.save(user);     	return userEs;   }     //根据用户ID查询用户信息   public User queryUserById(String userId) {   		User user = repository.findByUserId(userId);      	return user;   }   }</code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-64552.htm">厦门宠物收养（厦门领养宠物中心）</a></p>
+                                        <p>下一个：<a href="/news/article-65175.htm">动物疫苗去哪里买比较好一点 动物疫苗去哪里买比较好一点的</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-63322.htm" title="动物医院实践心得体会总结怎么写 动物医院实践心得体会总结怎么写啊">动物医院实践心得体会总结怎么写 动物医院实践心得体会总结怎么写啊</a></li>
+                        <li class="py-2"><a href="/news/article-53085.htm" title="Python笔记：内置函数chr()用法">Python笔记：内置函数chr()用法</a></li>
+                        <li class="py-2"><a href="/news/article-63936.htm" title="芭比堂宠物医院体育大街（芭比堂宠物医院玉泉路总店）">芭比堂宠物医院体育大街（芭比堂宠物医院玉泉路总店）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-16-free-clash-subscribe.htm" title="2月16日最新Airport Node订阅 | 21.1M/S|2025年SSR/V2ray/Shadowrocket/Clash免费节点地址链接分享">2月16日最新Airport Node订阅 | 21.1M/S|2025年SSR/V2ray/Shadowrocket/Clash免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-17-free-subscribe-node.htm" title="2月17日最新Airport Node订阅 | 22.9M/S|2025年Clash/V2ray/SSR/Shadowrocket免费节点地址链接分享">2月17日最新Airport Node订阅 | 22.9M/S|2025年Clash/V2ray/SSR/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-64551.htm" title="动物疫苗的种类有哪些图片及名称及价格 动物疫苗的种类有哪些图片及名称及价格表">动物疫苗的种类有哪些图片及名称及价格 动物疫苗的种类有哪些图片及名称及价格表</a></li>
+                        <li class="py-2"><a href="/news/article-54720.htm" title="动物疫苗可以和食物一起放冰箱吗多久打一次（动物疫苗需要冷藏吗）">动物疫苗可以和食物一起放冰箱吗多久打一次（动物疫苗需要冷藏吗）</a></li>
+                        <li class="py-2"><a href="/news/article-61532.htm" title="SpringSecurity如何使用注解控制权限">SpringSecurity如何使用注解控制权限</a></li>
+                        <li class="py-2"><a href="/news/article-52029.htm" title="动物疫苗生产车间图片（动物疫苗生产车间图片高清）">动物疫苗生产车间图片（动物疫苗生产车间图片高清）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-22-free-subscribe-node.htm" title="2月22日最新Airport Node订阅 | 18.2M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享">2月22日最新Airport Node订阅 | 18.2M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end offerings -->
+    
+        <!-- bottom footer -->
+    <div class="footer-bottom">
+        <div class="container">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p class="text-white-50 f-15 mb-0">
+                <a href="/">Airport Node免费节点地址中文网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <!-- end bottom footer -->
+    <!-- script -->
+    <script data-cfasync="false" src="/assets/website/js/frontend/airportnode/email-decode.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/fakeLoader.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+    <!-- end script -->
+</body>
+
+</html>
