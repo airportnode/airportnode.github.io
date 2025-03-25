@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://airportnode.github.io/news/article-79686.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jackson   json对象、实体类相互转换</title>
+        <meta name="description" content="json对象转换为实体类，使用jackson 进行jsonObject、实体类对象转换。 首先导入依赖 &lt;dependency&gt;     &lt;groupId&gt;com.faster" />
+        <link rel="icon" href="/assets/website/img/airportnode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Airport Node免费节点地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://airportnode.github.io/news/article-79686.htm" />
+    <meta property="og:site_name" content="Airport Node免费节点地址中文网" />
+    <meta property="og:title" content="jackson   json对象、实体类相互转换" />
+    <meta property="og:image" content="https://airportnode.github.io/uploads/20250201/022d052b190cbcd86e8c2fbcdcb697dc.webp" />
+        <meta property="og:release_date" content="2025-03-23T08:23:10" />
+    <meta property="og:updated_time" content="2025-03-23T08:23:10" />
+        <meta property="og:description" content="json对象转换为实体类，使用jackson 进行jsonObject、实体类对象转换。 首先导入依赖 &lt;dependency&gt;     &lt;groupId&gt;com.faster" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="jackson   json对象、实体类相互转换">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <link rel="stylesheet" href="/assets/website/css/airportnode/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fakeLoader.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDWP7NM5HQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZDWP7NM5HQ');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- loading indicator -->
+    <div class="fakeLoader"></div>
+    <!-- end loading indicator -->
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container">
+            <a href="/" class="navbar-brand xcblog-blog-logo">
+                                <span>Airport Node</span>
+                            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/client.htm">客户端</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/news/">新闻资讯</a>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end navigation bar -->
+    <!-- header-title -->
+    <div class="header-title">
+        <div class="container">
+            <h1>jackson   json对象、实体类相互转换</h1>
+            <p>
+            	<a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+            </p>
+        </div>
+    </div>
+    <!-- end header-title -->
+    <!-- offerings -->
+    <div class="services section bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>json对象转换为实体类，使用jackson 进行jsonObject、实体类对象转换。</p> <p>首先导入依赖</p> <pre><code>&lt;dependency&gt;     &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;     &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;     &lt;version&gt;2.9.5&lt;/version&gt; &lt;/dependency&gt; </code></pre> <p>常用方法有如下几个：readValue、writer、writeValueAsString</p> <pre><code> public &lt;T&gt; T readValue(File src, Class&lt;T&gt; valueType) throws IOException, JsonParseException, JsonMappingException {         return this._readMapAndClose(this._jsonFactory.createParser(src), this._typeFactory.constructType(valueType));     } </code></pre> <pre><code>    public ObjectWriter writer() {         return this._newWriter(this.getSerializationConfig());     }  </code></pre> <pre><code> public String writeValueAsString(Object value) throws JsonProcessingException {         SegmentedStringWriter sw = new SegmentedStringWriter(this._jsonFactory._getBufferRecycler());          try {             this._configAndWriteValue(this._jsonFactory.createGenerator(sw), value);         } catch (JsonProcessingException var4) {             throw var4;         } catch (IOException var5) {             throw JsonMappingException.fromUnexpectedIOE(var5);         }          return sw.getAndClear();     } </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-78993.htm">免费领养宠物送到家门口违法吗（免费领养宠物怎么赚钱）</a></p>
+                                        <p>下一个：<a href="/news/article-79688.htm">Android 弹窗设计规范</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-14-free-node-subscribe-links.htm" title="2月14日最新Airport Node订阅 | 21.9M/S|2025年V2ray/SSR/Clash/Shadowrocket免费节点地址链接分享">2月14日最新Airport Node订阅 | 21.9M/S|2025年V2ray/SSR/Clash/Shadowrocket免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-9-free-subscribe-node.htm" title="2月9日最新Airport Node订阅 | 21.5M/S|2025年V2ray/Shadowrocket/Clash/SSR免费节点地址链接分享">2月9日最新Airport Node订阅 | 21.5M/S|2025年V2ray/Shadowrocket/Clash/SSR免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-71592.htm" title="领养协议书范本图片（领养协议书范本图片大全）">领养协议书范本图片（领养协议书范本图片大全）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-24-free-node-subscribe-links.htm" title="2月24日最新Airport Node订阅 | 19.8M/S|2025年Clash/Shadowrocket/SSR/V2ray免费节点地址链接分享">2月24日最新Airport Node订阅 | 19.8M/S|2025年Clash/Shadowrocket/SSR/V2ray免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-3-free-clash-subscribe.htm" title="3月3日最新Airport Node订阅 | 19M/S|2025年V2ray/Shadowrocket/SSR/Clash免费节点地址链接分享">3月3日最新Airport Node订阅 | 19M/S|2025年V2ray/Shadowrocket/SSR/Clash免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-78304.htm" title="宠物粮好卖吗现在（宠物粮销售好做吗）">宠物粮好卖吗现在（宠物粮销售好做吗）</a></li>
+                        <li class="py-2"><a href="/news/article-54166.htm" title="被猫咬出血了需要打几针（被猫咬出血了需要打几针疫苗）">被猫咬出血了需要打几针（被猫咬出血了需要打几针疫苗）</a></li>
+                        <li class="py-2"><a href="/news/article-52544.htm" title="[ Shell ] 通过 Shell 脚本导出 GDSII/OASIS 文件">[ Shell ] 通过 Shell 脚本导出 GDSII/OASIS 文件</a></li>
+                        <li class="py-2"><a href="/news/article-68964.htm" title="java高级用法之:JNA类型映射应该注意的一些问题">java高级用法之:JNA类型映射应该注意的一些问题</a></li>
+                        <li class="py-2"><a href="/news/article-55272.htm" title="家庭式宠物寄养平台（家庭式宠物寄养平台朝阳区）">家庭式宠物寄养平台（家庭式宠物寄养平台朝阳区）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">75</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end offerings -->
+    
+        <!-- bottom footer -->
+    <div class="footer-bottom">
+        <div class="container">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p class="text-white-50 f-15 mb-0">
+                <a href="/">Airport Node免费节点地址中文网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <!-- end bottom footer -->
+    <!-- script -->
+    <script data-cfasync="false" src="/assets/website/js/frontend/airportnode/email-decode.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/fakeLoader.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+    <!-- end script -->
+</body>
+
+</html>
