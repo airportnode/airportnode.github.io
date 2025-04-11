@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://airportnode.github.io/news/article-92583.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django.http.request中QueryDict 对象</title>
+        <meta name="description" content="在一个&nbsp;HttpRequest&nbsp;对象中，&nbsp;GET&nbsp;和&nbsp;POST&nbsp;属性都是&nbsp;django.http.QueryDict&nbsp;的" />
+        <link rel="icon" href="/assets/website/img/airportnode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Airport Node免费节点地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://airportnode.github.io/news/article-92583.htm" />
+    <meta property="og:site_name" content="Airport Node免费节点地址中文网" />
+    <meta property="og:title" content="django.http.request中QueryDict 对象" />
+    <meta property="og:image" content="https://airportnode.github.io/uploads/20250201/1d993d30abea16f2716e336c580c6e66.webp" />
+        <meta property="og:release_date" content="2025-04-10T08:17:11" />
+    <meta property="og:updated_time" content="2025-04-10T08:17:11" />
+        <meta property="og:description" content="在一个&nbsp;HttpRequest&nbsp;对象中，&nbsp;GET&nbsp;和&nbsp;POST&nbsp;属性都是&nbsp;django.http.QueryDict&nbsp;的" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="django.http.request中QueryDict 对象">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <link rel="stylesheet" href="/assets/website/css/airportnode/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fakeLoader.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDWP7NM5HQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZDWP7NM5HQ');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- loading indicator -->
+    <div class="fakeLoader"></div>
+    <!-- end loading indicator -->
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container">
+            <a href="/" class="navbar-brand xcblog-blog-logo">
+                                <span>Airport Node</span>
+                            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/client.htm">客户端</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/news/">新闻资讯</a>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end navigation bar -->
+    <!-- header-title -->
+    <div class="header-title">
+        <div class="container">
+            <h1>django.http.request中QueryDict 对象</h1>
+            <p>
+            	<a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+            </p>
+        </div>
+    </div>
+    <!-- end header-title -->
+    <!-- offerings -->
+    <div class="services section bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <div id="cnblogs_post_body" class="blogpost-body"> <p id="cn15">在一个&nbsp;HttpRequest&nbsp;对象中，&nbsp;GET&nbsp;和&nbsp;POST&nbsp;属性都是&nbsp;django.http.QueryDict&nbsp;的实例。&nbsp;QueryDict&nbsp;是一个类似于字典的类，专门用来处理用一个键的多值。当处理一些HTML表单中的元素，特别是&nbsp;&lt;select multiple="multiple"&gt;&nbsp;之类传递同一key的多值的元素时，就需要这个类了。</p> <p id="cn16">QueryDict&nbsp;实例是不可变的，除非创建了一个&nbsp;copy()&nbsp;副本。也就是说不能直接更改&nbsp;request.POST&nbsp;和&nbsp;request.GET&nbsp;的属性。</p> <p id="cn17">QueryDict&nbsp;实现了所有标准的字典的方法，因为它正是字典的一个子类。与其不同的东西已在下表中列出。</p> <table id="cn18" border="1" cellspacing="0" cellpadding="0"> <thead> <tr> <td colspan="2"> <p>QueryDicts&nbsp;与标准字典的区别</p> </td> </tr> <tr> <td> <p>方法</p> </td> <td> <p>与标准字典实现的不同</p> </td> </tr> </thead> <tbody> <tr> <td style="width:130px;"> <p><span style="font-size:12px;">__getitem__</span></p> </td> <td> <p><span style="font-size:12px;">与一个字典一样。但是，当一个键有多个值时，&nbsp;__getitem__()&nbsp;返回最后一个值。</span></p> </td> </tr> <tr> <td> <p><span style="font-size:12px;">__setitem__</span></p> </td> <td> <p><span style="font-size:12px;">将所给键的值设为&nbsp;[value]&nbsp;（一个只有一个&nbsp;value&nbsp;元素的&nbsp;Python列表）。&nbsp;注意，因对其它的字典函数有副作用，故它只能被称为一个可变的&nbsp;QueryDict&nbsp;（通过&nbsp;copy()&nbsp;创建）。</span></p> </td> </tr> <tr> <td> <p><span style="font-size:12px;">get()</span></p> </td> <td> <p><span style="font-size:12px;">如果一个键多个值，和&nbsp;__getitem__&nbsp;一样，&nbsp;get()&nbsp;返回最后一个值。</span></p> </td> </tr> <tr> <td> <p><span style="font-size:12px;">update()</span></p> </td> <td> <p><span style="font-size:12px;">参数是一个&nbsp;QueryDict&nbsp;或标准字典。&nbsp;和标准字典的</span></p> <p><span style="font-size:12px;">update&nbsp;不同，这个方法*增加*而不是替换一项内容：</span></p> <div> <p><span style="font-size:12px;">&gt;&gt;&gt; q = QueryDict('a=1')</span></p> <p><span style="font-size:12px;">&gt;&gt;&gt; q = q.copy() #&nbsp;使其可变</span></p> <p><span style="font-size:12px;">&gt;&gt;&gt; q.update({'a': '2'})</span></p> <p><span style="font-size:12px;">&gt;&gt;&gt; q.getlist('a')</span></p> <p><span style="font-size:12px;">['1', '2']</span></p> <p><span style="font-size:12px;">&gt;&gt;&gt; q['a'] #&nbsp;返回最后一个值</span></p> <p><span style="font-size:12px;">['2']</span></p> </p></div> </td> </tr> <tr> <td> <p><span style="font-size:12px;">items()</span></p> </td> <td> <p><span style="font-size:12px;">和标准字典的&nbsp;items()&nbsp;方法一样，&nbsp;不同的是它和&nbsp;__getitem()__&nbsp;一样，返回最后一个值：</span></p> <div> <p><span style="font-size:12px;">&gt;&gt;&gt; q = QueryDict('a=1&amp;a=2&amp;a=3')</span></p> <p><span style="font-size:12px;">&gt;&gt;&gt; q.items()</span></p> <p><span style="font-size:12px;">[('a', '3')]</span></p> </p></div> </td> </tr> <tr> <td> <p><span style="font-size:12px;">values()</span></p> </td> <td> <p><span style="font-size:12px;">和标准字典的&nbsp;values()&nbsp;方法一样，&nbsp;不同的是它和&nbsp;__getitem()__&nbsp;一样，返回最后一个值。</span></p> </td> </tr> </tbody> </table> <p id="cn21">&nbsp;</p> <table id="cn22" border="1" cellspacing="0" cellpadding="0"> <thead> <tr> <td colspan="2"> <p>&nbsp;附加的&nbsp;(非字典的) QueryDict&nbsp;方法</p> </td> </tr> <tr> <td> <p>方法</p> </td> <td> <p>描述</p> </td> </tr> </thead> <tbody> <tr> <td> <p><span style="font-size:12px;">copy()</span></p> </td> <td> <p><span style="font-size:12px;">返回一个对象的副本，使用的是Python标准库中的&nbsp;copy.deepcopy()&nbsp;。&nbsp;该副本是可变的，也就是说，你能改变它的值。</span></p> </td> </tr> <tr> <td> <p><span style="font-size:12px;">getlist(key)</span></p> </td> <td> <p><span style="font-size:12px;">以Python列表的形式返回所请求键的数据。若键不存在则返回空列表。它保证了一定会返回某种形式的list。</span></p> </td> </tr> <tr> <td> <p><span style="font-size:12px;">setlist(key, list_)</span></p> </td> <td> <p><span style="font-size:12px;">将所给键的键值设为&nbsp;list_&nbsp;（与&nbsp;__setitem__()&nbsp;不同）。</span></p> </td> </tr> <tr> <td> <p><span style="font-size:12px;">appendlist(key, item)</span></p> </td> <td> <p><span style="font-size:12px;">在&nbsp;key&nbsp;相关的list上增加&nbsp;item&nbsp;。</span></p> </td> </tr> <tr> <td> <p><span style="font-size:12px;">setlistdefault(key, l)</span></p> </td> <td> <p><span style="font-size:12px;">和&nbsp;setdefault&nbsp;一样，&nbsp;不同的是它的第二个参数是一个列表，而不是一个值。</span></p> </td> </tr> <tr> <td> <p><span style="font-size:12px;">lists()</span></p> </td> <td> <p><span style="font-size:12px;">和&nbsp;items()&nbsp;一样，&nbsp;不同的是它以一个列表的形式返回字典每一个成员的所有值。&nbsp;例如：</span></p> <div> <p><span style="font-size:12px;">&gt;&gt;&gt; q = QueryDict('a=1&amp;a=2&amp;a=3')</span></p> <p><span style="font-size:12px;">&gt;&gt;&gt; q.lists()</span></p> <p><span style="font-size:12px;">[('a', ['1', '2', '3'])]</span></p> </p></div> </td> </tr> <tr> <td style="width:130px;"> <p><span style="font-size:12px;">urlencode()</span></p> </td> <td> <p><span style="font-size:12px;">返回一个请求字符串格式的数据字符串（如，&nbsp;"a=2&amp;b=3&amp;b=5"&nbsp;）。</span></p> <p><span style="font-size:12px;">&nbsp;</span></p> </td> </tr> </tbody> </table> </div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-92582.htm">JavaScript函数调用及函数上下文(this)</a></p>
+                                        <p>下一个：<a href="/news/article-93349.htm">八公宠物收银系统好用吗（八公宠物收银系统好用吗安全吗）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-79686.htm" title="jackson   json对象、实体类相互转换">jackson   json对象、实体类相互转换</a></li>
+                        <li class="py-2"><a href="/news/article-69623.htm" title="动物诊疗许可证办理流程视频（动物诊疗许可证申请条件）">动物诊疗许可证办理流程视频（动物诊疗许可证申请条件）</a></li>
+                        <li class="py-2"><a href="/news/article-67669.htm" title="扫一扫识别（扫一扫识别花草树木）">扫一扫识别（扫一扫识别花草树木）</a></li>
+                        <li class="py-2"><a href="/news/article-81746.htm" title="猫咪最信任你的八大表现（猫让摸哪里代表信任你）">猫咪最信任你的八大表现（猫让摸哪里代表信任你）</a></li>
+                        <li class="py-2"><a href="/news/article-86028.htm" title="被猫爪子勾了一下出了一点血没打针（被猫爪子勾了一下出了一点血没打针怎么办）">被猫爪子勾了一下出了一点血没打针（被猫爪子勾了一下出了一点血没打针怎么办）</a></li>
+                        <li class="py-2"><a href="/news/article-82464.htm" title="长沙宠物领养中心哪家好一点（长沙有宠物领养中心吗）">长沙宠物领养中心哪家好一点（长沙有宠物领养中心吗）</a></li>
+                        <li class="py-2"><a href="/news/article-68964.htm" title="java高级用法之:JNA类型映射应该注意的一些问题">java高级用法之:JNA类型映射应该注意的一些问题</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-5-clash-windows.htm" title="3月5日最新Airport Node订阅 | 21.4M/S|2025年SSR/Shadowrocket/V2ray/Clash免费节点地址链接分享">3月5日最新Airport Node订阅 | 21.4M/S|2025年SSR/Shadowrocket/V2ray/Clash免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-75598.htm" title="天津宠物救助中心 天津宠物救助中心电话">天津宠物救助中心 天津宠物救助中心电话</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-12-free-subscribe-node.htm" title="3月12日最新Airport Node订阅 | 18.6M/S|2025年Clash/SSR/V2ray/Shadowrocket免费节点地址链接分享">3月12日最新Airport Node订阅 | 18.6M/S|2025年Clash/SSR/V2ray/Shadowrocket免费节点地址链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end offerings -->
+    
+        <!-- bottom footer -->
+    <div class="footer-bottom">
+        <div class="container">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p class="text-white-50 f-15 mb-0">
+                <a href="/">Airport Node免费节点地址中文网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <!-- end bottom footer -->
+    <!-- script -->
+    <script data-cfasync="false" src="/assets/website/js/frontend/airportnode/email-decode.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/fakeLoader.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+    <!-- end script -->
+</body>
+
+</html>
