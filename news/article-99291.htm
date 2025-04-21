@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://airportnode.github.io/news/article-99291.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用maven构建SpringBoot打包成war包，步骤，超级详细</title>
+        <meta name="description" content="SpringBoot打包成war包，步骤超级详细    问题：使用maven构建SpringBoot打包成war包，发布到服务器上，总是报错 第一步： 第二步： 第三步： 第四步：     问题：使用" />
+        <link rel="icon" href="/assets/website/img/airportnode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Airport Node免费节点地址中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://airportnode.github.io/news/article-99291.htm" />
+    <meta property="og:site_name" content="Airport Node免费节点地址中文网" />
+    <meta property="og:title" content="使用maven构建SpringBoot打包成war包，步骤，超级详细" />
+    <meta property="og:image" content="https://airportnode.github.io/uploads/20250201/3fb407dfc9b9362f9e69508ef9aefd85.webp" />
+        <meta property="og:release_date" content="2025-04-19T08:57:36" />
+    <meta property="og:updated_time" content="2025-04-19T08:57:36" />
+        <meta property="og:description" content="SpringBoot打包成war包，步骤超级详细    问题：使用maven构建SpringBoot打包成war包，发布到服务器上，总是报错 第一步： 第二步： 第三步： 第四步：     问题：使用" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="使用maven构建SpringBoot打包成war包，步骤，超级详细">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <link rel="stylesheet" href="/assets/website/css/airportnode/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/fakeLoader.min.css">
+    <link rel="stylesheet" href="/assets/website/css/airportnode/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDWP7NM5HQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZDWP7NM5HQ');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- loading indicator -->
+    <div class="fakeLoader"></div>
+    <!-- end loading indicator -->
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container">
+            <a href="/" class="navbar-brand xcblog-blog-logo">
+                                <span>Airport Node</span>
+                            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/client.htm">客户端</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/news/">新闻资讯</a>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end navigation bar -->
+    <!-- header-title -->
+    <div class="header-title">
+        <div class="container">
+            <h1>使用maven构建SpringBoot打包成war包，步骤，超级详细</h1>
+            <p>
+            	<a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+            </p>
+        </div>
+    </div>
+    <!-- end header-title -->
+    <!-- offerings -->
+    <div class="services section bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <div class="toc"> <h3>SpringBoot打包成war包，步骤超级详细</h3> <ul> <li> <ul> <li><a href="#mavenSpringBootwar_1" rel="nofollow">问题：使用maven构建SpringBoot打包成war包，发布到服务器上，总是报错</a></li> <li><a href="#_4" rel="nofollow">第一步：</a></li> <li><a href="#_22" rel="nofollow">第二步：</a></li> <li><a href="#_29" rel="nofollow">第三步：</a></li> <li><a href="#_55" rel="nofollow">第四步：</a></li> </ul> </li> </ul> </div> <h2><a id="mavenSpringBootwar_1" rel="nofollow"></a>问题：使用maven构建SpringBoot打包成war包，发布到服务器上，总是报错</h2> <p>由于maven构建的SpringBoot项目，发布了n多次，也在网上查了很多，方法试完了，也没有找到错误原因，最后查看tomcat错误日志，总结了一下步骤</p> <h2><a id="_4" rel="nofollow"></a>第一步：</h2> <p>SpringBoot项目集成了tomcat的内置插件，我们需要在pom文件中将tomcat的内置插件排除在外<br /> 代码如下</p> <pre><code>&lt;dependency&gt;             &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;             &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;             &lt;!-- 移除嵌入式tomcat插件 --&gt;             &lt;exclusions&gt;                 &lt;exclusion&gt;                     &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;                     &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;                 &lt;/exclusion&gt;             &lt;/exclusions&gt;         &lt;/dependency&gt;</code></pre> <h2><a id="_22" rel="nofollow"></a>第二步：</h2> <p>排除了Tomcat的内置插件之后，我们还需要注意的是，pom文件中打包方式一定要设置为war包形式</p> <pre><code>&lt;packaging&gt;war&lt;/packaging&gt;</code></pre> <h2><a id="_29" rel="nofollow"></a>第三步：</h2> <p>重写我们的SpringBoot启动类</p> <pre><code>import org.springframework.boot.SpringApplication; import org.springframework.boot.autoconfigure.SpringBootApplication; import org.springframework.boot.builder.SpringApplicationBuilder; import org.springframework.boot.web.support.SpringBootServletInitializer; import org.springframework.scheduling.annotation.EnableScheduling;  @SpringBootApplication @EnableScheduling public class JiChengSpringBoot extends SpringBootServletInitializer {      @Override     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {         return application.sources(JiChengSpringBoot.class);     }      public static void main(String[] args) {         SpringApplication.run(JiChengSpringBoot.class, args);     }  }</code></pre> <h2><a id="_55" rel="nofollow"></a>第四步：</h2> <p>这一步就是我遇到的问题关键了！！！！<br /> 去除pom文件中的</p> <pre><code>&lt;name&gt;jicheng&lt;/name&gt;</code></pre> <p>一定要去除name标签，据我查看日志，导致错误的原因是web.xml的mapping与servlet-name不匹配导致的，所以这里大胆的猜测，这个name会影响web.xml中的某个name</p> <p><strong>这里我去掉这个标签之后，问题得到了结局，<strong>希望可以帮到你们</strong></strong></p> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-98498.htm">动物疫苗市场销售工作布署会议（动物疫苗销售大客户经理）</a></p>
+                                        <p>下一个：<a href="/news/article-99292.htm">宠物店利润和成本分析图（宠物店的利润率）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-5-clash-windows.htm" title="3月5日最新Airport Node订阅 | 21.4M/S|2025年SSR/Shadowrocket/V2ray/Clash免费节点地址链接分享">3月5日最新Airport Node订阅 | 21.4M/S|2025年SSR/Shadowrocket/V2ray/Clash免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-98497.htm" title="动物疫苗的作用原理是什么（动物疫苗的概念）">动物疫苗的作用原理是什么（动物疫苗的概念）</a></li>
+                        <li class="py-2"><a href="/news/article-85309.htm" title="一只猫大概要多少钱（一只猫大概要多少钱呢）">一只猫大概要多少钱（一只猫大概要多少钱呢）</a></li>
+                        <li class="py-2"><a href="/news/article-86750.htm" title="宠物批发渠道有哪些平台（宠物批发渠道有哪些平台呢）">宠物批发渠道有哪些平台（宠物批发渠道有哪些平台呢）</a></li>
+                        <li class="py-2"><a href="/news/article-68964.htm" title="java高级用法之:JNA类型映射应该注意的一些问题">java高级用法之:JNA类型映射应该注意的一些问题</a></li>
+                        <li class="py-2"><a href="/news/article-79688.htm" title="Android 弹窗设计规范">Android 弹窗设计规范</a></li>
+                        <li class="py-2"><a href="/news/article-65784.htm" title="打了疫苗的猫抓出红印（打过疫苗的猫抓伤出血）">打了疫苗的猫抓出红印（打过疫苗的猫抓伤出血）</a></li>
+                        <li class="py-2"><a href="/news/article-88933.htm" title="河南省兽用疫苗中心电话查询（郑州兽用疫苗）">河南省兽用疫苗中心电话查询（郑州兽用疫苗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-11-free-high-speed-nodes.htm" title="3月11日最新Airport Node订阅 | 22.1M/S|2025年Shadowrocket/Clash/SSR/V2ray免费节点地址链接分享">3月11日最新Airport Node订阅 | 22.1M/S|2025年Shadowrocket/Clash/SSR/V2ray免费节点地址链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-9-node-share-links.htm" title="4月9日最新Airport Node订阅 | 19M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享">4月9日最新Airport Node订阅 | 19M/S|2025年Shadowrocket/Clash/V2ray/SSR免费节点地址链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">61</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end offerings -->
+    
+        <!-- bottom footer -->
+    <div class="footer-bottom">
+        <div class="container">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p class="text-white-50 f-15 mb-0">
+                <a href="/">Airport Node免费节点地址中文网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <!-- end bottom footer -->
+    <!-- script -->
+    <script data-cfasync="false" src="/assets/website/js/frontend/airportnode/email-decode.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/jquery.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/fakeLoader.min.js"></script>
+    <script src="/assets/website/js/frontend/airportnode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+    <!-- end script -->
+</body>
+
+</html>
