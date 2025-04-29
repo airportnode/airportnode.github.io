@@ -1,4 +1,4 @@
-# 4月29日最新Airport Node订阅 | 22M/S|2025年Clash/V2ray/Shadowrocket/SSR免费节点地址链接分享  更新时间 2025-04-29 08:28:23
+# 4月29日最新Airport Node订阅 | 19.7M/S|2025年SSR/V2ray/Clash/Shadowrocket免费节点地址链接分享  更新时间 2025-04-29 16:15:02
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://airportnode.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
