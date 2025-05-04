@@ -1,4 +1,4 @@
-# 4月29日最新Airport Node订阅 | 19.7M/S|2025年SSR/V2ray/Clash/Shadowrocket免费节点地址链接分享  更新时间 2025-04-29 16:15:02
+# 5月4日最新Airport Node订阅 | 21.7M/S|2025年V2ray/Shadowrocket/SSR/Clash免费节点地址链接分享  更新时间 2025-05-04 09:36:49
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://airportnode.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://airportnode.github.io/uploads/2025/04/0-20250429.yaml
-- https://airportnode.github.io/uploads/2025/04/1-20250429.yaml
-- https://airportnode.github.io/uploads/2025/04/2-20250429.yaml
-- https://airportnode.github.io/uploads/2025/04/3-20250429.yaml
-- https://airportnode.github.io/uploads/2025/04/4-20250429.yaml
+- https://airportnode.github.io/uploads/2025/05/0-20250504.yaml
+- https://airportnode.github.io/uploads/2025/05/1-20250504.yaml
+- https://airportnode.github.io/uploads/2025/05/2-20250504.yaml
+- https://airportnode.github.io/uploads/2025/05/3-20250504.yaml
+- https://airportnode.github.io/uploads/2025/05/4-20250504.yaml
 
 ### V2ray订阅链接
 
-- https://airportnode.github.io/uploads/2025/04/0-20250429.txt
-- https://airportnode.github.io/uploads/2025/04/1-20250429.txt
-- https://airportnode.github.io/uploads/2025/04/2-20250429.txt
-- https://airportnode.github.io/uploads/2025/04/3-20250429.txt
-- https://airportnode.github.io/uploads/2025/04/4-20250429.txt
+- https://airportnode.github.io/uploads/2025/05/0-20250504.txt
+- https://airportnode.github.io/uploads/2025/05/1-20250504.txt
+- https://airportnode.github.io/uploads/2025/05/2-20250504.txt
+- https://airportnode.github.io/uploads/2025/05/3-20250504.txt
+- https://airportnode.github.io/uploads/2025/05/4-20250504.txt
 
 ### Sing-box订阅链接
 
-- https://airportnode.github.io/uploads/2025/04/20250429.json
+- https://airportnode.github.io/uploads/2025/05/20250504.json
 
 ## 更多clash节点订阅 ：
 
